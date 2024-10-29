@@ -47,7 +47,7 @@ const Page = ({ params }: props) => {
 
       <p className="text-2xl font-bold text-starlight-blue">{title}</p>
       <p className="w-1/2">{description}</p>
-      <div className="border-starlight-lightgray mt-4 flex w-1/2 flex-col gap-4 rounded-xl border-2 p-8">
+      <div className="mt-4 flex w-1/2 flex-col gap-4 rounded-xl border-2 border-starlight-lightgray p-8">
         <Label className="text-xl">Request {title} Access</Label>
 
         <Text
