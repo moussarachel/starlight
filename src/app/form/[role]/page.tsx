@@ -25,7 +25,7 @@ const Page = ({ params }: props) => {
 
   return (
     <div className="mt-10 flex flex-col items-center justify-center gap-2">
-      <div className="w-1/2 w-full">
+      <div className="w-1/2">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
