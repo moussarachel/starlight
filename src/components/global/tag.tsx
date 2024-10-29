@@ -9,7 +9,13 @@ const mappings: Record<string, string> = {
 };
 
 const Tag = ({ children }: props) => {
-  return <div className={`${mappings[children]}`}>{children}</div>;
+  return (
+    <div
+      className={`${mappings[children]} rounded-md px-3 py-1 text-center font-semibold text-white`}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Tag;

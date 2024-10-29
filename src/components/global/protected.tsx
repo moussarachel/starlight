@@ -4,8 +4,8 @@ type props = {
 
 const Protected = ({ children }: props) => {
   return (
-    <div className="flex h-screen flex-col">
-      <div className="h-full">{children}</div>
+    <div className="flex h-screen w-full flex-col">
+      <div className="flex h-full items-center justify-center">{children}</div>
     </div>
   );
 };
