@@ -67,7 +67,7 @@ const Header = ({
           <p className="rounded-md bg-starlight-blue px-7 py-1.5 text-sm font-bold text-white">
             {status}
           </p>
-          <div className="border-starlight-lightgray mx-4 h-8 border-l-2" />
+          <div className="mx-4 h-8 border-l-2 border-starlight-lightgray" />
           <Projects projects={projects} />
         </div>
       </div>
