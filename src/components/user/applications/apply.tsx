@@ -2,10 +2,9 @@ import Card from "./card";
 import Image from "next/image";
 
 const apply = () => {
-
   const cardData = [
     {
-      image: <Image src = "" alt = "</>"/>,
+      image: <Image src="" alt="</>" />,
       name: "ACM Ignite",
       role: "Frontend Engineer",
       place: "Remote or In Person (UC Riverside)",
@@ -13,7 +12,7 @@ const apply = () => {
       buttonName: "Apply",
     },
     {
-      image: <Image src = "" alt = "</>"/>,
+      image: <Image src="" alt="</>" />,
       name: "ACM Create",
       role: "Website Designer",
       place: "Remote or Hybrid (UC Riverside)",
@@ -21,7 +20,7 @@ const apply = () => {
       buttonName: "Apply",
     },
     {
-      image: <Image src = "" alt = "</>"/>,
+      image: <Image src="" alt="</>" />,
       name: "ACM Forge",
       role: "Hardware/Software Engineer",
       place: "In Person (UC Riverside)",
@@ -30,14 +29,13 @@ const apply = () => {
     },
   ];
 
-
   return (
     <div className="h-full">
       User Application
       <div className="flex h-full items-center justify-evenly">
-          {cardData.map((card, index) => (
+        {cardData.map((card, index) => (
           <Card
-            key = {index}
+            key={index}
             image={card.image}
             name={card.name}
             role={card.role}
