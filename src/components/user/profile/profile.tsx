@@ -1,5 +1,6 @@
 import Header from "./header";
 import Information from "./information";
+import profile from "@/public/mock/placeholderpic.webp";
 
 const Profile = () => {
   return (
@@ -10,7 +11,7 @@ const Profile = () => {
         github="Andrewk1"
         discord="Andrewk1"
         status="Returning"
-        profile="/assets/placeholderpic.webp"
+        profile={profile}
         projects={["ACM", "UCR", "testtestesttest"]}
       />
       <Information />

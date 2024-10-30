@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import Projects from "./projects";
 import Link from "next/link";
@@ -10,7 +10,7 @@ interface HeaderProps {
   github: string;
   discord: string;
   status: string;
-  profile: string;
+  profile: StaticImageData;
   projects: string[];
 }
 
@@ -67,7 +67,7 @@ const Header = ({
           <p className="rounded-md bg-starlight-blue px-7 py-1.5 text-sm font-bold text-white">
             {status}
           </p>
-          <div className="mx-4 h-8 border-l-2 border-starlight-lightgray" />
+          <div className="border-starlight-lightgray mx-4 h-8 border-l-2" />
           <Projects projects={projects} />
         </div>
       </div>
