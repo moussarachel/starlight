@@ -1,25 +1,21 @@
 import Select from "../../global/inputs/select";
-import Input from "../../global/inputs/input";
 import Radio from "../../global/inputs/radio";
-import Text from "../../global/inputs/text";
+import Input from "../../global/inputs/input";
 import Textarea from "@/components/global/inputs/textarea";
-import {
-  nameOptions,
-  majorOptions,
-  graduationOptions,
-  questionOptions,
-  techStackOptions,
-} from "@/data/profile/profile-information";
+import { questions } from "@/data/profile/information";
 
 const Information = () => {
   return (
-    <div className="h-1/2 rounded-xl border-4 border-gray-300">
-      <Text meta={nameOptions} />
-      <Select meta={majorOptions} />
-      <Input />
-      <Radio meta={graduationOptions} />
-      <Textarea meta={questionOptions} />
-      <Select meta={techStackOptions} />
+    <div className="flex h-1/2 flex-col gap-4 rounded-xl border-2 border-starlight-lightgray p-8">
+      {questions.map((question, index) => {
+        const { type } = question;
+
+        if (type === "radio") return <Radio meta={question} key={index} />;
+        if (type === "textarea")
+          return <Textarea meta={question} key={index} />;
+        if (type === "select") return <Select meta={question} key={index} />;
+        if (type === "text") return <Input meta={question} key={index} />;
+      })}
     </div>
   );
 };

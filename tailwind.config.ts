@@ -7,6 +7,13 @@ module.exports = {
       colors: {
         starlight: {
           blue: "#173967",
+          yellow: "#FFE899",
+          gray: "#7A8190",
+          lightgray: "#DBDDE1",
+          orange: "#FF9A0D",
+          red: "#F25F5C",
+          teal: "#4DC8B2",
+          lightblue: "#3287F8",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

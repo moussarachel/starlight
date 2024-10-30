@@ -1,4 +1,5 @@
 import Navigation from "@/components/global/navigation/side";
+import { links } from "@/data/director/navigation";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -7,7 +8,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="h-full">
-      <Navigation />
+      <Navigation links={links} />
       {children}
     </div>
   );

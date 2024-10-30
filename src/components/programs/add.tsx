@@ -1,26 +1,70 @@
+"use client";
 import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+
+import Input from "@/components/global/inputs/input";
+import Select from "@/components/global/inputs/select";
+import Textarea from "@/components/global/inputs/textarea";
+import { Label } from "../ui/label";
+import Button from "../global/button";
 
 const Add = () => {
   return (
-    <AlertDialogContent>
+    <AlertDialogContent className="max-w-4xl">
       <AlertDialogHeader>
-        <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-        <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete your
-          account and remove your data from our servers.
-        </AlertDialogDescription>
+        <Label className="text-xl">Add New Project</Label>
       </AlertDialogHeader>
+      <Input
+        meta={{
+          title: "Title",
+          type: "text",
+          placeholder: "i.e WINC",
+          maxLength: 32,
+          value: "",
+          disabled: false,
+        }}
+      />
+      <Textarea
+        meta={{
+          title: "Description",
+          type: "textarea",
+          placeholder: "Description of your project",
+          maxLength: 500,
+          value: "",
+          disabled: false,
+        }}
+      />
+      <Select
+        meta={{
+          title: "Tech Stack",
+          type: "select",
+          options: ["TypeScript", "Next.js", "TailwindCSS"],
+          value: "",
+          disabled: false,
+        }}
+      />
+      <Input
+        meta={{
+          title: "Total Spots",
+          type: "text",
+          placeholder: "e.g 10",
+          maxLength: 5,
+          value: "",
+          disabled: false,
+        }}
+      />
       <AlertDialogFooter>
-        <AlertDialogCancel>Cancel</AlertDialogCancel>
-        <AlertDialogAction>Add</AlertDialogAction>
+        <AlertDialogCancel asChild>
+          <Button onClick={() => {}}>Cancel</Button>
+        </AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button onClick={() => {}}>Add</Button>
+        </AlertDialogAction>
       </AlertDialogFooter>
     </AlertDialogContent>
   );

@@ -1,12 +1,18 @@
-interface props {
-  children: React.ReactNode;
+"use client";
+
+interface ButtonProps {
+  children: string | number;
+  onClick: () => void;
 }
 
-const Button = ({ children }: props) => {
+const Button = ({ children, onClick }: ButtonProps) => {
   return (
-    <div className="rounded-sm bg-starlight-blue text-center text-white">
+    <button
+      className="rounded-md bg-starlight-blue px-8 py-2 font-serif text-white hover:opacity-80"
+      onClick={onClick}
+    >
       {children}
-    </div>
+    </button>
   );
 };
 

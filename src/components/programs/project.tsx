@@ -9,11 +9,14 @@ interface props {
 
 const Project = ({ title, description, tags }: props) => {
   return (
-    <div>
-      {title} {description}
-      {tags.map((text, index) => (
-        <Tag key={index}>{text}</Tag>
-      ))}
+    <div className="rounded-md border border-gray-300 bg-white p-4">
+      <div className="text-2xl font-semibold">{title}</div>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((text, index) => (
+          <Tag key={index}>{text}</Tag>
+        ))}
+      </div>
+      <div className="">{description}</div>
     </div>
   );
 };

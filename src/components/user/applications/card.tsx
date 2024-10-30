@@ -1,31 +1,43 @@
-import Button from "../../global/button";
+"use client";
+import {
+  Card as ShadCNCard,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Button from "@/components/global/button";
+import Image, { StaticImageData } from "next/image";
 
 interface Props {
-  image: string; //PLACEHOLDER FOR ACTUAL IMAGE
+  image: StaticImageData;
   name: string;
   role: string;
   place: string;
   time: string;
-  buttonName: string;
 }
 
-const Card = ({ image, name, role, place, time, buttonName }: Props) => {
+const Card = ({ image, name, role, place, time }: Props) => {
   return (
-    <div className="flex h-1/2 w-1/4 flex-col items-center border-2 border-gray-300 p-10">
-      <div className="p-6 text-6xl font-bold">{image}</div>
-      <div className="text-nowrap p-3 text-center text-4xl font-bold">
-        {name}
-      </div>
-      <div className="p-8 font-bold">
-        {/*Info*/}
-        <div className="text-nowrap p-1 text-center text-sm">{role}</div>
-        <div className="text-nowrap p-1 text-center text-sm">{place}</div>
-        <div className="text-nowrap p-1 text-center text-sm">{time}</div>
-      </div>
-      <div className="h-24 w-36">
-        <Button children={buttonName} />
-      </div>
-    </div>
+    <ShadCNCard>
+      <CardHeader>
+        <CardTitle>
+          <Image src={image} alt="Logo" />
+        </CardTitle>
+        <CardDescription>
+          {name} {time}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>
+          {role} | {place}
+        </p>
+      </CardContent>
+      <CardFooter>
+        <Button onClick={() => {}}>Apply</Button>
+      </CardFooter>
+    </ShadCNCard>
   );
 };
 
