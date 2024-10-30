@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import logo from "@/public/assets/ACMStarlightLogo.webp";
+import logo from "@/public/logo.webp";
 
 interface link {
   name: string;
