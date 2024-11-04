@@ -37,7 +37,11 @@ const Header = ({
 
         <div className="flex items-center gap-2">
           <Mail className="h-5 w-5 text-starlight-gray" />
-          <Link href={`mailto:${email}`} className=" text-starlight-gray" target="_blank">
+          <Link
+            href={`mailto:${email}`}
+            className="text-starlight-gray"
+            target="_blank"
+          >
             {email}
           </Link>
         </div>
