@@ -36,17 +36,17 @@ const Header = ({
         <p className="text-3xl font-bold">{name}</p>
 
         <div className="flex items-center gap-2">
-          <Mail className="h-5 w-5" />
-          <Link href={`mailto:${email}`} className="text-base" target="_blank">
+          <Mail className="h-5 w-5 text-starlight-gray" />
+          <Link href={`mailto:${email}`} className=" text-starlight-gray" target="_blank">
             {email}
           </Link>
         </div>
 
         <div className="flex items-center gap-2">
-          <FaGithub className="h-5 w-5" />
+          <FaGithub className="h-5 w-5 text-starlight-gray" />
           <Link
             href={`https://github.com/${github}`}
-            className="text-base"
+            className="text-starlight-gray"
             target="_blank"
           >
             {github}
@@ -54,10 +54,10 @@ const Header = ({
         </div>
 
         <div className="flex items-center gap-2">
-          <FaDiscord className="h-5 w-5" />
+          <FaDiscord className="h-5 w-5 text-starlight-gray" />
           <Link
             href={`https://discord.com/users/${discord}`}
-            className="text-base"
+            className="text-starlight-gray"
             target="_blank"
           >
             {discord}
