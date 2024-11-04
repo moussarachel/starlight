@@ -28,8 +28,8 @@ const Header = ({
       <Image
         src={profile}
         alt="profile picture"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         className="rounded-xl"
       />
       <div className="flex max-h-full w-full max-w-full flex-col gap-1">
