@@ -16,12 +16,12 @@ const SideNav = ({ links }: props) => {
     <nav className="flex h-screen w-[10%] flex-col items-center bg-starlight-blue text-white">
       <Image src={Logo} alt="Starlight Logo" />
 
-      <div className="w-full text-center">
+      <div className="flex w-full flex-col text-center">
         {links.map(({ link, name }, index) => (
           <Link
             key={index}
             href={link}
-            className="block !w-full hover:bg-starlight-yellow"
+            className="!w-full hover:bg-starlight-yellow"
           >
             {name}
           </Link>
