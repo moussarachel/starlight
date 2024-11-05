@@ -35,32 +35,36 @@ const Header = ({
       <div className="flex max-h-full w-full max-w-full flex-col gap-1">
         <p className="text-3xl font-bold">{name}</p>
 
-        <div className="flex items-center gap-2">
-          <Mail className="h-5 w-5" />
-          <Link href={`mailto:${email}`} className="text-base" target="_blank">
-            {email}
+        <div className="flex items-center">
+          <Link
+            href={`mailto:${email}`}
+            className="text-starlight-gray"
+            target="_blank"
+          >
+            <Mail className="inline-block h-5 w-5 text-starlight-gray" />
+            <span className="ml-2">{email}</span>
           </Link>
         </div>
 
         <div className="flex items-center gap-2">
-          <FaGithub className="h-5 w-5" />
           <Link
             href={`https://github.com/${github}`}
-            className="text-base"
+            className="text-starlight-gray"
             target="_blank"
           >
-            {github}
+            <FaGithub className="inline h-5 w-5 text-starlight-gray" />
+            <span className="ml-2">{github}</span>
           </Link>
         </div>
 
         <div className="flex items-center gap-2">
-          <FaDiscord className="h-5 w-5" />
           <Link
             href={`https://discord.com/users/${discord}`}
-            className="text-base"
+            className="text-starlight-gray"
             target="_blank"
           >
-            {discord}
+            <FaDiscord className="inline-block h-5 w-5 text-starlight-gray" />
+            <span className="ml-2">{discord}</span>
           </Link>
         </div>
         <div className="flex max-w-full items-center">
