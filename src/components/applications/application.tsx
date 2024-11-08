@@ -14,7 +14,7 @@ interface props {
 
 const Application = ({ title, questions }: props) => {
   return (
-    <div className="rounded-md border-2 border-black">
+    <div className="space-y-8 rounded-md border-2 border-starlight-lightgray/25 p-10">
       <p>Apply to {title}</p>
 
       <Input
