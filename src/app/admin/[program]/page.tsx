@@ -2,6 +2,7 @@ import Add from "@/components/programs/add";
 import Project from "@/components/programs/project";
 import { Project as ProjectType } from "@/types/projects";
 import { AlertDialog, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { Label } from "@/components/ui/label";
 
 const projects: ProjectType[] = [
   {
@@ -24,12 +25,15 @@ const projects: ProjectType[] = [
 const Page = () => {
   return (
     <div className="">
-      <AlertDialog>
-        <AlertDialogTrigger>Add Project</AlertDialogTrigger>
-        <Add />
-      </AlertDialog>
+      <div className="mx-8 mt-6 flex items-center justify-between">
+        <Label className="text-2xl">Ignite 2024 Projects</Label>
+        <AlertDialog>
+          <AlertDialogTrigger>Add Project</AlertDialogTrigger>
+          <Add />
+        </AlertDialog>
+      </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="m-6 grid grid-cols-3 gap-4">
         {projects.map(({ title, description, tags }, index) => (
           <Project
             key={index}
