@@ -21,7 +21,7 @@ const SideNav = ({ links }: props) => {
           <Link
             key={index}
             href={link}
-            className="!w-full hover:bg-starlight-yellow"
+            className="!w-full hover:bg-starlight-yellow hover:text-black"
           >
             {name}
           </Link>
